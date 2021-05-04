@@ -48,7 +48,7 @@ echo "This is income by different product category";
 	{
 		echo "SUCCESS: Connection to Heroku Postgres has been established";
 
-		$product_query = 'INSERT INTO public."products"(id,product_name,category,descriptions,price,date) VALUES (\''.$id.'\',\''.$name.'\',\''.$cat.'\',\''.$desc.'\','.$price.',\''.$date.'\')';
+		$product_query = 'INSERT INTO public."products"(id,product_name,cattegory,descriptions,price,date) VALUES (\''.$id.'\',\''.$name.'\',\''.$cat.'\',\''.$desc.'\','.$price.',\''.$date.'\')';
 
 		echo '<p>'.$product_query.'</p>';
 s
