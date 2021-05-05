@@ -23,11 +23,11 @@ echo "This is income by different product category";
 	echo $price;
 	echo $desc;
 
-	$host = "ec2-3-233-43-103.compute-1.amazonaws.com";
-	$database = "dsgvfqb4nqvl8";
-	$user = "uztsaaqvbykjov";
+	$host = "ec2-18-233-83-165.compute-1.amazonaws.com";
+	$database = "db24t10uekpnvh";
+	$user = "jbuuiblgavnapv";
 	$port = "5432";
-	$password = "7fd9b55f2fb49a7eb00b798b7747a4d4250f574dbc241f3f434f1bad6022eafb";
+	$password = "466bceba4becfc6ff658d160e30545aa26cc46dce8fe63d75b63453dc36a5325";
 	
 	$host_param_str = "host=".$host;
 	$dbname_param_str = " dbname=".$database;
