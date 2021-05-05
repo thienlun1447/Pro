@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CUSTOMER</title>
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="jquery.mobile-1.4.5/jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <h2>CUSTOMER - ATN COMPANY</h2>
+    <p>This form is filled every time a customer purchases an item</p>
+    <form action="customer_create.php" method="post">
+        <p>
+            <label for="customerid">Customer ID<sup>*</sup></label>
+            <input type="text" name="id" id="customerid">
+        </p>
+        <p>
+            <label for="customername">Customer Name<sup>*</sup></label>
+            <input type="text" name="name" id="customername">
+        </p>
+		<p>
+            <label for="telephonenumber">Telephone number</label>
+            <input type="text" name="phone" id="date">
+        </p>
+        <p>
+            <label for="address">Address<sup>*</sup></label>
+            <textarea name="address" id="description" rows="5" cols="30"></textarea>
+        </p>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
