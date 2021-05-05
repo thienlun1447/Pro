@@ -51,7 +51,7 @@
         }else{
             echo "SUCCESS: Connection to Heroku Postgres has been established";
 
-            $product_query = 'INSERT INTO public."CUSTOMER"(Email,Id,Name,Phone,Address) 
+            $product_query = 'INSERT INTO public."CUSTOMER"("Email","Id","Name","Phone","Address") 
             VALUES (\''.$cusid.'\',\''.$cusname.'\',\''."Default".'\',\''."Default".'\','."Default".')';
 
             echo '<p>' .$product_query. '</p>';
