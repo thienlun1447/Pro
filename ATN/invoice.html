@@ -1,65 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+    <h2>Invoice - ATN COMPANY</h2>
+    <p>This form is filled every time a Invoice purchases an item</p>
+    <form action="invoice_create.php" method="POST">
+        <!-- customer -->
+            <label for="customer_id">Customer ID<sup>*</sup></label>
+            <input data-clear-btn="true" type="text" name="customer_id" id="customer_id"> <br>
+            <label for="customer_name">Customer Name<sup>*</sup></label>
+            <input data-clear-btn="true" type="text" name="customer_name" id="customer_name"><br>
 
-	<link rel="stylesheet" href="Jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="Jquery.mobile-1.4.5/jquery-1.11.1.min.js"></script>
-	<script src="Jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    </head>
-    <body>
-        <div data-role="page" id="atn_invoice">
-        <div data-role="header">
-            <h1>INVOICE - ATN COMPANY</h1>
-            <h1>PLEASE INPUT INVOICE HERE</h1>
-        </div>
-        <div data-role="main" class="ui-content">
-            <form action ="invoice_create.php" method="post">
-            <h3>Customer information</h3>
-            <p>
-                <label for="customerID">Customer ID</label>
-                <input type="text" name="customer_id" id="customerID"/>
-                </p>
-                
-                 <p>
-                <label for="customerName">Customer Name</label>
-                <input type="text" name="customer_name" id="customerName"/>
-            </p>
-
-            <h3>Invoice Information</h3>
-            <p>
-                <label for="invoiceID">Invoice ID</label>
-                <input type="text" name="invoice_id" id="invoiceID"/>
-            </p>
-            <p>
-                <label for="invoiceDate">Invoice Date</label>
-                <input type="text" name="invoice_date" id="invoiceDate"/>
-            </p>
-
-        </div>
-        <div date-role="collapsible" data-collapsed="false">
-            <h4>This is collapsible list items</h4>
-            <ul class="content-list" data-role="listview"></ul>
-        </div>
-
-        <a id="btnAddProduct" class="ui-btn ui-btn-inline">
-            Add a product
-        </a>
-
-        <button type="submit" value="Submit">Submit</button>
-        <input type="reset" value="Reset">
-        </form>
-        <script>
-            $(document).ready(function () {
-            $("#btnAddProduct").click(function (){
-                var newli = 
-                '<li>ProductID: <input name="invoice_product_id[]" type="text"> Quanlity: <input name="invoice_product_quantity[]" type="text"></li>';
-                $("ul.content-list").append(newli);
-                $("ul.content-list").listview("refresh");
-                });
-            });
-        </script>
-    </body>
-    </html>
+        <!-- invoice -->
+            <label for="invoiceid">Invoice ID</label>
+                <input data-clear-btn="true" type="text" name="invoice_id" id="invoice_id"> <br>
+            <label for="Date">Invoice Date</label>
+                <input data-clear-btn="true" type="date" name="invoice_date" id="invoice_date"> <br>
+            
+                <h3>Invoice detail</h3>
+                <div data-role="collapsible" da-collapsed="false">
+                    <h4>This is invoice details</h4>
+                    <ul class="content-list" data-role="listview">
+                        
+                    </ul>
+                </div>  
+                <a onclick="addProduct()" href="" class="ui-btn ui-btn-b ui-corner-all ui-btn-icon-left ui-icon-plus">Add Product</a>                                              
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+    </form>
+    <script>       
+        function addProduct()
+        {                  
+            var newli = '<li> Product ID: <input style="display:inline-block;" name="invoice_product_id[]" type="text"> Quantity: <input name="invoice_product_quantity[]" type="text"></li>';
+            $("ul.content-list").append(newli);                           
+            $("ul.content-list").listview("refresh");
+        }           
+    </script>
+</body>
