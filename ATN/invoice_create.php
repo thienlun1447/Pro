@@ -31,11 +31,11 @@
             $product_quantity .= $invoice_product_quantity[$i].",";
         }
 
-        $host="ec2-3-233-43-103.compute-1.amazonaws.com";
-        $database="daoeb2h1i4gref";
-        $user = "ljguzytsklzppr";
+        $host = "ec2-18-233-83-165.compute-1.amazonaws.com";
+        $database = "db24t10uekpnvh";
+        $user = "jbuuiblgavnapv";
         $port = "5432";
-        $password = "88ba687e8bbe5cbd0741417086045a25cc5bb0d1b3d35ab35cfea4c48680e1fa";
+        $password = "466bceba4becfc6ff658d160e30545aa26cc46dce8fe63d75b63453dc36a5325";
 
         $host_param_str = "host=".$host;
 	    $dbname_param_str = " dbname=".$database;
