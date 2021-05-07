@@ -63,7 +63,8 @@
 
 		    if (pg_query($connection,$invoice_query)){
 			    echo '<p>SUCCESS: Record is added succesfully. A new product is created</p>';
-		    }else{
+		    }
+            else{
 			    echo '<p>ERROR: Could not execute query</p>';
 		    }
         }
