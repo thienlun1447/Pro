@@ -52,7 +52,8 @@
         
         if ($connection === false){
             die("ERROR: Could not connect to the database");
-        }else{
+        }
+        else{
             echo "SUCCESS: Connection to Heroku Postgres has been established";
 
             $invoice_query = 'INSERT INTO public."invoice"("customer_id" , "customer_name" , "invoice_id" , "invoice_date" , "invoice_product_id" ,"invoice_product_quantity") VALUES 
