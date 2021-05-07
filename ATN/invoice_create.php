@@ -32,8 +32,7 @@
             $sum = $sum.$sum_qua;
         }
         $sum = $sum.'}\')';
-        echo "<p>".$sum."</p>";
-
+        
 
         $host = "ec2-18-233-83-165.compute-1.amazonaws.com";
         $database = "db24t10uekpnvh";
@@ -49,6 +48,7 @@
         else {
             echo "SUCCESS: Connection to Heroku Postgres has been established";
             
+            echo "<p>".$sum."</p>";
 
             if (pg_query($connection, $sum)) {
                 echo '<p>SUCCESS: Record is added successfully. A new customer is created</p>';
