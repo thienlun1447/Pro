@@ -35,11 +35,11 @@
         echo "<p>".$sum."</p>";
 
 
-        $host = "ec2-184-73-198-174.compute-1.amazonaws.com";
-        $database = "dee1kdrja9ig32";
-        $user = "qmgxwwmiogtjzs";
+        $host = "ec2-18-233-83-165.compute-1.amazonaws.com";
+        $database = "db24t10uekpnvh";
+        $user = "jbuuiblgavnapv";
         $port = "5432";
-        $password = "6868691f1c3fbca6d0dd16d9c7b8e51069ee7613e025e27ce21912cbda387338";
+        $password = "466bceba4becfc6ff658d160e30545aa26cc46dce8fe63d75b63453dc36a5325";
 
         $connection_string = "host=".$host." dbname=".$database." user=".$user." port=".$port." password=".$password." sslmode=require";
         $connection = pg_connect($connection_string);
