@@ -49,7 +49,6 @@
         else {
             echo "SUCCESS: Connection to Heroku Postgres has been established";
             
-            echo $sum
 
             if (pg_query($connection, $sum)) {
                 echo '<p>SUCCESS: Record is added successfully. A new customer is created</p>';
